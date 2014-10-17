@@ -10,6 +10,10 @@
 		123AC3603B044B81B556C4F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740CDFF7FA944F66B1714894 /* Foundation.framework */; };
 		4BF6F18D544D4B43AB53CEC1 /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */; };
 		86B12BE4DC976B9D8136F1CD /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4F8F6C70C07E1998ABE051 /* libPods-unit_tests.a */; };
+		D80D149D19F09B720018489E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80D149C19F09B720018489E /* Main.storyboard */; };
+		D80D14B119F0AC500018489E /* joe-burgess.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B019F0AC500018489E /* joe-burgess.png */; };
+		D80D14B319F0ACAE0018489E /* flying.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B219F0ACAE0018489E /* flying.png */; };
+		D80D14B819F151830018489E /* coverimage.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B719F151830018489E /* coverimage.png */; };
 		F2DA577D1EC348D78215A834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047361924796455E8BB2675E /* main.m */; };
 		F3A9137FBC40455D8A840D98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38670AEC748C4D8F923E6887 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -37,6 +41,10 @@
 		BC7AF055F66F4AD4BAA48996 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		BF3743855881463492EBBA59 /* facepad-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "facepad-Prefix.pch"; sourceTree = "<group>"; };
 		BF65580E223247C2968DC75D /* facepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80D149C19F09B720018489E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D80D14B019F0AC500018489E /* joe-burgess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joe-burgess.png"; sourceTree = "<group>"; };
+		D80D14B219F0ACAE0018489E /* flying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flying.png; sourceTree = "<group>"; };
+		D80D14B719F151830018489E /* coverimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverimage.png; sourceTree = "<group>"; };
 		F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 		FF4F8F6C70C07E1998ABE051 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +116,7 @@
 				F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */,
 				1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */,
 				FF2E31828EF54A4794F04731 /* Resources */,
+				D80D149C19F09B720018489E /* Main.storyboard */,
 			);
 			path = facepad;
 			sourceTree = "<group>";
@@ -158,6 +167,9 @@
 		FF2E31828EF54A4794F04731 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D80D14B719F151830018489E /* coverimage.png */,
+				D80D14B219F0ACAE0018489E /* flying.png */,
+				D80D14B019F0AC500018489E /* joe-burgess.png */,
 				38670AEC748C4D8F923E6887 /* Images.xcassets */,
 				0D72935011154FE7A2A50F1F /* Other-Sources */,
 			);
@@ -246,6 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A9137FBC40455D8A840D98 /* Images.xcassets in Resources */,
+				D80D149D19F09B720018489E /* Main.storyboard in Resources */,
+				D80D14B819F151830018489E /* coverimage.png in Resources */,
+				D80D14B319F0ACAE0018489E /* flying.png in Resources */,
+				D80D14B119F0AC500018489E /* joe-burgess.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
