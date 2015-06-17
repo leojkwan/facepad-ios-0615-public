@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "FISUser.h"
-
+#import "FISTextPost.h"
+#import "FISImagePost.h"
+#import "FISFriendFeedTableViewController.h"
 
 
 @interface FISFriendsTableViewController : UITableViewController
@@ -16,5 +18,7 @@
 @property (nonatomic, strong) FISUser *friend;
 @property (nonatomic, strong) NSMutableArray *listOfFriends;
 @property (nonatomic, strong) NSArray *initialFriends;
+
+
 
 @end

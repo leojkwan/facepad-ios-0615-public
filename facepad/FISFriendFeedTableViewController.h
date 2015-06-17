@@ -11,6 +11,6 @@
 
 @interface FISFriendFeedTableViewController : UITableViewController
 
-@property (nonatomic, strong) FISUser *friendProfile;
+@property (nonatomic, strong) FISUser *friendClicked;
 
 @end

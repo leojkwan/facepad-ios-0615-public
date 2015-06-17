@@ -17,10 +17,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    FISImagePost *image1 = [[FISImagePost alloc] init];
+    FISImagePost *image2 = [[FISImagePost alloc] init];
+    FISImagePost *image3 = [[FISImagePost alloc] init];
+    FISImagePost *image4 = [[FISImagePost alloc] init];
+
+    FISTextPost *text1 = [[FISTextPost alloc] init];
+    FISTextPost *text2 = [[FISTextPost alloc] init];
+    FISTextPost *text3 = [[FISTextPost alloc] init];
+    FISTextPost *text4 = [[FISTextPost alloc] init];
+
+    
     FISUser *leo = [[FISUser alloc] initWithName:@"Leo"];
     FISUser *john = [[FISUser alloc] initWithName:@"John"];
     FISUser *ashley = [[FISUser alloc] initWithName:@"Ashley"];
     FISUser *alan = [[FISUser alloc] initWithName:@"Alan"];
+    
+
+    leo.postsFeed = [@[text1,image2,text3] mutableCopy];
+    
+//    self.friend.postsFeed = [[NSDictionary alloc] init];
+//    leo.postsFeed = @{text1.dateOfPost: text1,
+//                      text2.dateOfPost: text2,
+//                      text3.dateOfPost: text3,
+//                      image1.dateOfPost: image1,
+//                      image2.dateOfPost: image2};
     
     self.initialFriends = @[leo,john,ashley,alan];
     self.listOfFriends = [[NSMutableArray alloc] init];
@@ -60,8 +81,13 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    FISFriendFeedTableViewController *destinationVC = segue.destinationViewController;
+    
+    NSIndexPath *indexClicked = self.tableView.indexPathForSelectedRow;
+    
+    destinationVC.friendClicked = self.listOfFriends[indexClicked.row];
+
 }
 
 /*

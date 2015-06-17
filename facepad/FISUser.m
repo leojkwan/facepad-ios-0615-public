@@ -11,12 +11,14 @@
 @implementation FISUser
 
 
+
 -(instancetype) initWithName:(NSString *)name {
 
     self= [super init];
     
     if (self) {
         _name = name;
+        _postsFeed = [[NSMutableArray alloc] init];
     }
     return self;
 }

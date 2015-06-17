@@ -13,12 +13,15 @@
 @interface FISUser : NSObject
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) UIImage *profilePic;
+@property (nonatomic, strong) NSMutableArray *postsFeed;
 
-@property (nonatomic, strong) NSDictionary *postsFeed;
 
 @property (nonatomic, strong) NSMutableArray *textEntries;
-
 @property (nonatomic, strong) NSMutableArray *ImageEntries;
+
+
+
 
 -(instancetype) initWithName:(NSString *)name;
 

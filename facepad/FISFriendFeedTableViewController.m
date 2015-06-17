@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = self.friendProfile.name;
+    self.navigationItem.title = self.friendClicked.name;
+    
     
 }
 
@@ -28,26 +29,34 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return self.friendClicked.postsFeed.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.friendClicked.postsFeed.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
-    
-    return cell;
+ UITableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imagePostReuseCell" forIndexPath:indexPath];
+
+//    
+//    if ([self.friendClicked.postsFeed[indexPath.row] isKindOfClass:[FISImagePost class]]  ) {
+//        UITableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imagePostReuseCell" forIndexPath:indexPath];
+//        imageCell.textLabel.text = [self.friendClicked.postsFeed[indexPath.row] ];
+//        return imageCell;
+//    } else {
+//        UITableViewCell *textCell = [tableView dequeueReusableCellWithIdentifier:@"textPostReuseCell" forIndexPath:indexPath];
+//        textCell.textLabel.text = [self.friendClicked.postsFeed[indexPath.row] name];
+//        return textCell;
+//    }
+//   
+    return nil;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
