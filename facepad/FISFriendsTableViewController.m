@@ -27,6 +27,12 @@
     FISTextPost *text3 = [[FISTextPost alloc] init];
     FISTextPost *text4 = [[FISTextPost alloc] init];
 
+
+    text1.textEntry = @"Hi, This is my first post";
+    text2.textEntry = @"Hi, This is my second post";
+    text3.textEntry = @"Hi, This is my third post";
+
+
     
     FISUser *leo = [[FISUser alloc] initWithName:@"Leo"];
     FISUser *john = [[FISUser alloc] initWithName:@"John"];
@@ -34,7 +40,7 @@
     FISUser *alan = [[FISUser alloc] initWithName:@"Alan"];
     
 
-    leo.postsFeed = [@[text1,image2,text3] mutableCopy];
+    leo.postsFeed = [@[text1,text2,text3] mutableCopy];
     
 //    self.friend.postsFeed = [[NSDictionary alloc] init];
 //    leo.postsFeed = @{text1.dateOfPost: text1,

@@ -15,6 +15,7 @@
 		9442C9DB1B321B62005DB91F /* FISUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442C9DA1B321B62005DB91F /* FISUser.m */; };
 		9442C9DE1B321B72005DB91F /* FISTextPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442C9DD1B321B72005DB91F /* FISTextPost.m */; };
 		9442C9E11B321B80005DB91F /* FISImagePost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442C9E01B321B80005DB91F /* FISImagePost.m */; };
+		9442C9E41B324048005DB91F /* FISTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442C9E31B324048005DB91F /* FISTableViewCell.m */; };
 		D80D149D19F09B720018489E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80D149C19F09B720018489E /* Main.storyboard */; };
 		D80D14B119F0AC500018489E /* joe-burgess.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B019F0AC500018489E /* joe-burgess.png */; };
 		D80D14B319F0ACAE0018489E /* flying.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B219F0ACAE0018489E /* flying.png */; };
@@ -53,6 +54,8 @@
 		9442C9DD1B321B72005DB91F /* FISTextPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTextPost.m; sourceTree = "<group>"; };
 		9442C9DF1B321B80005DB91F /* FISImagePost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISImagePost.h; sourceTree = "<group>"; };
 		9442C9E01B321B80005DB91F /* FISImagePost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISImagePost.m; sourceTree = "<group>"; };
+		9442C9E21B324048005DB91F /* FISTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FISTableViewCell.h; path = ../FISTableViewCell.h; sourceTree = "<group>"; };
+		9442C9E31B324048005DB91F /* FISTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FISTableViewCell.m; path = ../FISTableViewCell.m; sourceTree = "<group>"; };
 		BC7AF055F66F4AD4BAA48996 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		BF3743855881463492EBBA59 /* facepad-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "facepad-Prefix.pch"; sourceTree = "<group>"; };
 		BF65580E223247C2968DC75D /* facepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +143,8 @@
 				9442C9D41B321A7A005DB91F /* FISFriendsTableViewController.m */,
 				9442C9D61B321AF8005DB91F /* FISFriendFeedTableViewController.h */,
 				9442C9D71B321AF8005DB91F /* FISFriendFeedTableViewController.m */,
+				9442C9E21B324048005DB91F /* FISTableViewCell.h */,
+				9442C9E31B324048005DB91F /* FISTableViewCell.m */,
 			);
 			path = facepad;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 			files = (
 				4BF6F18D544D4B43AB53CEC1 /* FISAppDelegate.m in Sources */,
 				F2DA577D1EC348D78215A834 /* main.m in Sources */,
+				9442C9E41B324048005DB91F /* FISTableViewCell.m in Sources */,
 				9442C9E11B321B80005DB91F /* FISImagePost.m in Sources */,
 				9442C9DB1B321B62005DB91F /* FISUser.m in Sources */,
 				9442C9DE1B321B72005DB91F /* FISTextPost.m in Sources */,

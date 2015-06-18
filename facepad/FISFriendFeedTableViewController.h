@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "FISUser.h"
+#import "FISTextPost.h"
+#import "FISImagePost.h"
+#import "FISFriendFeedTableViewController.h"
+#import "FISTableViewCell.h"
 
 @interface FISFriendFeedTableViewController : UITableViewController
 

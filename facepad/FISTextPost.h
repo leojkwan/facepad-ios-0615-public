@@ -11,6 +11,7 @@
 @interface FISTextPost : NSObject
 
 @property (nonatomic, strong) NSDate *dateOfPost;
+@property (nonatomic, strong) NSString *textEntry;
 
 
 @end

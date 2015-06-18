@@ -10,6 +10,7 @@
 
 @interface FISFriendFeedTableViewController ()
 
+
 @end
 
 @implementation FISFriendFeedTableViewController
@@ -35,26 +36,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.friendClicked.postsFeed.count;
+    return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
- UITableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imagePostReuseCell" forIndexPath:indexPath];
 
-//    
-//    if ([self.friendClicked.postsFeed[indexPath.row] isKindOfClass:[FISImagePost class]]  ) {
-//        UITableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imagePostReuseCell" forIndexPath:indexPath];
-//        imageCell.textLabel.text = [self.friendClicked.postsFeed[indexPath.row] ];
-//        return imageCell;
-//    } else {
-//        UITableViewCell *textCell = [tableView dequeueReusableCellWithIdentifier:@"textPostReuseCell" forIndexPath:indexPath];
-//        textCell.textLabel.text = [self.friendClicked.postsFeed[indexPath.row] name];
-//        return textCell;
-//    }
-//   
-    return nil;
+    
+//    FISTableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imagePostReuseCell" forIndexPath:indexPath];
+    
+    FISTableViewCell *textCell = [tableView dequeueReusableCellWithIdentifier:@"textPostReuseCell" forIndexPath:indexPath];
+
+    
+    
+    FISTextPost *textPostInSection = self.friendClicked.postsFeed[indexPath.section];
+    textCell.textEntryField.text = textPostInSection.textEntry;
+
+    textCell.userNameLabel.text = self.friendClicked.name;
+
+    return textCell;
 }
 
 
