@@ -33,14 +33,19 @@
     text3.textEntry = @"Hi, This is my third post";
     
     UIImage *leoPic = [UIImage imageNamed:@"leoPic"];
-    
+    UIImage *joePic = [UIImage imageNamed:@"joe"];
+
+    image1.image = [UIImage imageNamed:@"imagePost1"];
+
+    FISUser *joe = [[FISUser alloc] initWithName:@"Joe" profilePic:joePic];
     FISUser *leo = [[FISUser alloc] initWithName:@"Leo" profilePic:leoPic];
-    FISUser *john = [[FISUser alloc] initWithName:@"John" profilePic:leoPic];
     FISUser *ashley = [[FISUser alloc] initWithName:@"Ashley" profilePic:leoPic];
     FISUser *alan = [[FISUser alloc] initWithName:@"Alan" profilePic:leoPic];
     
 
     leo.postsFeed = [@[text1,text2,text3] mutableCopy];
+    
+    joe.postsFeed = [@[image1,image1,image1,image1,image1,image1,image1,image1] mutableCopy];
     
 //    self.friend.postsFeed = [[NSDictionary alloc] init];
 //    leo.postsFeed = @{text1.dateOfPost: text1,

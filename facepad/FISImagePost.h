@@ -11,6 +11,6 @@
 @interface FISImagePost : NSObject
 
 @property (nonatomic, strong) NSDate *dateOfPost;
-
+@property (nonatomic, strong) UIImage *image;
 
 @end

@@ -42,70 +42,33 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSMutableArray *userFeed = self.friendClicked.postsFeed;
+    NSInteger postAtThisRow = indexPath.section;
+    
+    if ([userFeed[postAtThisRow] isKindOfClass:[FISTextPost class]]) {// THIS DON'T WORK!!!!
+    
+        NSLog(@"Am I inside?");
+            FISTextTableViewCell *textCell = [tableView dequeueReusableCellWithIdentifier:@"textPostReuseCell" forIndexPath:indexPath];
+            textCell.textEntryField.text = [userFeed[postAtThisRow] textEntry]; // this is how the content shows up!
+            textCell.profileImageView.image = self.friendClicked.profilePic; // this is how the profile shows up!
+            textCell.userNameLabel.text = self.friendClicked.name; // this is how the name shows up
 
-    
-//    FISTableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imagePostReuseCell" forIndexPath:indexPath];
-    
-    FISTableViewCell *textCell = [tableView dequeueReusableCellWithIdentifier:@"textPostReuseCell" forIndexPath:indexPath];
+            return textCell;
 
+    }
     
-    
-    FISTextPost *textPostInSection = self.friendClicked.postsFeed[indexPath.section];
-    
-    textCell.profileImageView.image = self.friendClicked.profilePic;
-    
-    textCell.textEntryField.text = textPostInSection.textEntry; // this is how the content shows up!
+    else if ([userFeed[postAtThisRow] isKindOfClass:[FISImagePost class]]) {
+            FISImageTableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imagePostReuseCell" forIndexPath:indexPath];
+            
+            imageCell.imageEntry.image = [userFeed[postAtThisRow] image]; // this is how the content shows up!
+            imageCell.profileImageView.image = self.friendClicked.profilePic; // this is how the profile shows up!
+            imageCell.userNameLabel.text = self.friendClicked.name; // this is how the name shows up
 
-    textCell.userNameLabel.text = self.friendClicked.name; // this is how the name shows up
-    
+            return imageCell;
+    }
     
 
-    return textCell;
+
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

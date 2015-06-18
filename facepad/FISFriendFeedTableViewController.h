@@ -11,7 +11,8 @@
 #import "FISTextPost.h"
 #import "FISImagePost.h"
 #import "FISFriendFeedTableViewController.h"
-#import "FISTableViewCell.h"
+#import "FISTextTableViewCell.h"
+#import "FISImageTableViewCell.h"
 
 @interface FISFriendFeedTableViewController : UITableViewController
 
