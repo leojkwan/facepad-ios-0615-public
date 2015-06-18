@@ -14,13 +14,14 @@
 
 
 
--(instancetype) initWithName:(NSString *)name {
+-(instancetype) initWithName:(NSString *)name profilePic:(UIImage*)profilepic {
 
     self= [super init];
     
     if (self) {
         _name = name;
         _postsFeed = [[NSMutableArray alloc] init];
+        _profilePic = profilepic;
     }
     return self;
 }

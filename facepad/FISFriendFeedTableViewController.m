@@ -51,9 +51,14 @@
     
     
     FISTextPost *textPostInSection = self.friendClicked.postsFeed[indexPath.section];
-    textCell.textEntryField.text = textPostInSection.textEntry;
+    
+    textCell.profileImageView.image = self.friendClicked.profilePic;
+    
+    textCell.textEntryField.text = textPostInSection.textEntry; // this is how the content shows up!
 
-    textCell.userNameLabel.text = self.friendClicked.name;
+    textCell.userNameLabel.text = self.friendClicked.name; // this is how the name shows up
+    
+    
 
     return textCell;
 }

@@ -25,7 +25,7 @@
 
 
 
--(instancetype) initWithName:(NSString *)name;
+-(instancetype) initWithName:(NSString *)name profilePic:(UIImage*)profilepic;
 
 
 

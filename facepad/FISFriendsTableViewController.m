@@ -31,13 +31,13 @@
     text1.textEntry = @"Hi, This is my first post";
     text2.textEntry = @"Hi, This is my second post";
     text3.textEntry = @"Hi, This is my third post";
-
-
     
-    FISUser *leo = [[FISUser alloc] initWithName:@"Leo"];
-    FISUser *john = [[FISUser alloc] initWithName:@"John"];
-    FISUser *ashley = [[FISUser alloc] initWithName:@"Ashley"];
-    FISUser *alan = [[FISUser alloc] initWithName:@"Alan"];
+    UIImage *leoPic = [UIImage imageNamed:@"leoPic"];
+    
+    FISUser *leo = [[FISUser alloc] initWithName:@"Leo" profilePic:leoPic];
+    FISUser *john = [[FISUser alloc] initWithName:@"John" profilePic:leoPic];
+    FISUser *ashley = [[FISUser alloc] initWithName:@"Ashley" profilePic:leoPic];
+    FISUser *alan = [[FISUser alloc] initWithName:@"Alan" profilePic:leoPic];
     
 
     leo.postsFeed = [@[text1,text2,text3] mutableCopy];
@@ -49,7 +49,7 @@
 //                      image1.dateOfPost: image1,
 //                      image2.dateOfPost: image2};
     
-    self.initialFriends = @[leo,john,ashley,alan];
+    self.initialFriends = @[joe,leo,ashley,alan];
     self.listOfFriends = [[NSMutableArray alloc] init];
     [self.listOfFriends addObjectsFromArray:self.initialFriends];
     }
